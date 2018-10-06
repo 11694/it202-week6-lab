@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<head>
+  <style>
+     canvas{ background-color:pink; }
+
+  </style>
+</head>
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+//Each letter is set to a variable, height, width, letter, and color is set//
+var letterk = {h:150,w:250,t:"K",c:"blue"}
+var letters = {h:250,w:250,t:"S",c:"orange"}
+var letterb = {h:350,w:250,t:"B",c:"green"}
+
+// setting the size of font//
+ctx.font='100px Arial';
+//each color is set before drawn//
+ctx.strokeStyle = letterk.c;
+//All variables are added together including max width of each letter
+ctx.strokeText(letterk.t,letterk.h,letterk.w,50);
+ctx.strokeStyle = letters.c;
+ctx.strokeText(letters.t,letters.h,letters.w,50);
+ctx.strokeStyle = letterb.c;
+ctx.strokeText(letterb.t,letterb.h,letterb.w,50);
+
+</script>
+
+</body>
+</html>
